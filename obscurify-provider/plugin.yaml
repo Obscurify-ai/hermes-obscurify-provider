@@ -1,0 +1,11 @@
+name: obscurify-provider
+kind: model-provider
+version: 1.0.0
+description: Obscurify.ai as a Hermes model provider — a privacy-focused, OpenAI-compatible API to 200+ models over zero-data-retention routes.
+author: Obscurify-ai
+requires_hermes: ">=0.22.5"
+requires_env:
+  - name: OBSCURIFY_API_KEY
+    description: Obscurify.ai API key (sk-obs1_...), from Show API Key on https://obscurify.ai/account
+    secret: true
+    url: https://obscurify.ai/account
