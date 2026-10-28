@@ -13,9 +13,9 @@ cleanup() {
 }
 trap cleanup EXIT
 mkdir -p "$HERMES_HOME/plugins/model-providers"
-ln -s "$here/obscurify-provider" "$HERMES_HOME/plugins/model-providers/obscurify-provider"
+ln -s "$here" "$HERMES_HOME/plugins/model-providers/obscurify-provider"
 
-"$HERMES" plugins validate "$here/obscurify-provider" | tail -1
+"$HERMES" plugins validate "$here" | tail -1
 
 # A brand-new Hermes home can lose the very first turn while its gateway starts, so allow one retry.
 out=$("$HERMES" -z "Reply with exactly: ok" --provider obscurify -m meta-llama/llama-3.3-70b-instruct 2>&1) \

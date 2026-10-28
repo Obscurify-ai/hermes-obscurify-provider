@@ -56,7 +56,7 @@ The plugin registers one model provider at import and nothing else: no tools, ho
 
 With Hermes 0.22.5 and `main` (2026-10-28), using a Pay As You Go key:
 
-- `hermes plugins validate --install-deps obscurify-provider` passes, including the security scan.
+- `hermes plugins validate --install-deps .` passes, including the security scan.
 - `hermes -z ... --provider obscurify -m meta-llama/llama-3.3-70b-instruct` answers.
 - With `deepseek/deepseek-v4-flash`, Hermes wrote a file through its file tool.
 
